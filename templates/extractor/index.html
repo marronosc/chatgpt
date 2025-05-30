@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+
+{% block title %}Extractor de ID de Canal{% endblock %}
+
+{% block content %}
+<div class="extractor-container">
+    <h1>Extractor de ID de Canal de YouTube</h1>
+    
+    <form method="post" class="extractor-form">
+        <input type="text" name="url" placeholder="Introduce la URL del canal o video de YouTube" required>
+        <input type="submit" value="Obtener ID del Canal" class="button">
+    </form>
+    
+    {% if result is not none %}
+        <div class="result-section">
+            {% if result %}
+                <div class="success-result">
+                    <h3>✅ Éxito</h3>
+                    <p>El ID del canal es: <strong class="channel-id">{{ result }}</strong></p>
+                    <button onclick="copyToClipboard('{{ result }}')" class="copy-button">Copiar ID</button>
+                </div>
+            {% else %}
+                <div class="error-result">
+                    <h3>❌ Error</h3>
+                    <p>No se pudo obtener el ID del canal. Verifica que la URL sea correcta.</p>
+                </div>
+            {% endif %}
+        </div>
+    {% endif %}
+    
+    {% if debug_info %}
+        <details class="debug-section">
+            <summary>🔍 Información de depuración</summary>
+            <pre class="debug-info">{{ debug_info }}</pre>
+        </details>
+    {% endif %}
+    
+    <div class="info-section">
+        <h3>¿Cómo usar esta herramienta?</h3>
+        <ul>
+            <li>Pega cualquier URL de YouTube relacionada con el canal</li>
+            <li>Puede ser la URL del canal, de un video, o del perfil</li>
+            <li>La herramienta extraerá automáticamente el ID del canal</li>
+        </ul>
+    </div>
+    
+    <a href="/" class="home-link">← Volver a la página principal</a>
+</div>
+
+<script>
+function copyToClipboard(text) {
+    navigator.clipboard.writeText(text).then(function() {
+        // Cambiar temporalmente el texto del botón
+        const button = document.querySelector('.copy-button');
+        const originalText = button.textContent;
+        button.textContent = '¡Copiado!';
+        button.style.backgroundColor = '#28a745';
+        
+        setTimeout(() => {
+            button.textContent = originalText;
+            button.style.backgroundColor = '';
+        }, 2000);
+    });
+}
+</script>
+{% endblock %}

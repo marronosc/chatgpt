@@ -1,0 +1,1498 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Tools - Herramientas Profesionales para Creadores</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+<div class="modern-container">
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-background">
+            <div class="floating-icons">
+                <div class="floating-icon" style="--delay: 0s; --duration: 20s;">📊</div>
+                <div class="floating-icon" style="--delay: -5s; --duration: 25s;">🔍</div>
+                <div class="floating-icon" style="--delay: -10s; --duration: 30s;">📈</div>
+                <div class="floating-icon" style="--delay: -15s; --duration: 22s;">🎯</div>
+                <div class="floating-icon" style="--delay: -20s; --duration: 28s;">💡</div>
+                <div class="floating-icon" style="--delay: -25s; --duration: 24s;">🚀</div>
+            </div>
+        </div>
+        
+        <div class="hero-content">
+            <div class="hero-logo">
+                <div class="logo-container">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="youtube-icon">
+                        <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                    </svg>
+                    <div class="logo-glow"></div>
+                </div>
+            </div>
+            
+            <h1 class="hero-title">
+                <span class="gradient-text">YouTube Tools</span>
+                <br>
+                <span class="subtitle">Herramientas Profesionales para Creadores</span>
+            </h1>
+            
+            <p class="hero-description">
+                Potencia tu canal de YouTube con nuestra suite completa de herramientas de análisis, 
+                investigación y optimización. Toma decisiones basadas en datos reales.
+            </p>
+            
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <div class="stat-number">15</div>
+                    <div class="stat-label">Herramientas</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">100%</div>
+                    <div class="stat-label">Gratuito</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">∞</div>
+                    <div class="stat-label">Análisis</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tools Grid Section -->
+    <section class="tools-section">
+        <div class="section-header">
+            <h2 class="section-title">Herramientas Disponibles</h2>
+            <p class="section-description">
+                Cada herramienta está diseñada para resolver un problema específico y ayudarte a crecer en YouTube
+            </p>
+        </div>
+
+        <div class="tools-grid">
+            <!-- 1. Extractor de ID -->
+            <div class="tool-card modern-card" data-category="utility">
+                <div class="card-header">
+                    <div class="tool-icon">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z"/>
+                        </svg>
+                    </div>
+                    <div class="tool-badge">Utilidad</div>
+                </div>
+                <div class="card-content">
+                    <h3>Extractor de ID de Canal</h3>
+                    <p>Obtén el ID único de cualquier canal de YouTube a partir de URLs de videos, canales o perfiles.</p>
+                    <div class="tool-features">
+                        <span class="feature-tag">🔗 URLs múltiples</span>
+                        <span class="feature-tag">⚡ Instantáneo</span>
+                        <span class="feature-tag">🔍 Detección automática</span>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <a href="/extractor" class="tool-button">
+                        <span>Extraer ID</span>
+                        <svg viewBox="0 0 24 24" class="button-icon">
+                            <path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <!-- 2. Análisis SEO -->
+            <div class="tool-card modern-card" data-category="seo">
+                <div class="card-header">
+                    <div class="tool-icon">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M9.5,3A6.5,6.5 0 0,1 16,9.5C16,11.11 15.41,12.59 14.44,13.73L14.71,14H15.5L20.5,19L19,20.5L14,15.5V14.71L13.73,14.44C12.59,15.41 11.11,16 9.5,16A6.5,6.5 0 0,1 3,9.5A6.5,6.5 0 0,1 9.5,3M9.5,5C7,5 5,7 5,9.5C5,12 7,14 9.5,14C12,14 14,12 14,9.5C14,7 12,5 9.5,5Z"/>
+                        </svg>
+                    </div>
+                    <div class="tool-badge seo">SEO</div>
+                </div>
+                <div class="card-content">
+                    <h3>Análisis SEO YouTube</h3>
+                    <p>Analiza los primeros 20 resultados de búsqueda para cualquier palabra clave y obtén métricas detalladas.</p>
+                    <div class="tool-features">
+                        <span class="feature-tag">📊 20 resultados</span>
+                        <span class="feature-tag">📈 Estadísticas completas</span>
+                        <span class="feature-tag">⏱️ Análisis temporal</span>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <a href="/seo" class="tool-button">
+                        <span>Analizar SEO</span>
+                        <svg viewBox="0 0 24 24" class="button-icon">
+                            <path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <!-- 3. Verificador de Posición -->
+            <div class="tool-card modern-card" data-category="analysis">
+                <div class="card-header">
+                    <div class="tool-icon">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M12,4A8,8 0 0,1 20,12A8,8 0 0,1 12,20A8,8 0 0,1 4,12A8,8 0 0,1 12,4M12,6A6,6 0 0,0 6,12A6,6 0 0,0 12,18A6,6 0 0,0 18,12A6,6 0 0,0 12,6M12,8A4,4 0 0,1 16,12A4,4 0 0,1 12,16A4,4 0 0,1 8,12A4,4 0 0,1 12,8Z"/>
+                        </svg>
+                    </div>
+                    <div class="tool-badge analysis">Análisis</div>
+                </div>
+                <div class="card-content">
+                    <h3>Verificador de Posición</h3>
+                    <p>Descubre si los videos de un canal aparecen entre los primeros 200 resultados para palabras clave específicas.</p>
+                    <div class="tool-features">
+                        <span class="feature-tag">🎯 200 resultados</span>
+                        <span class="feature-tag">📍 Posición exacta</span>
+                        <span class="feature-tag">📊 Métricas detalladas</span>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <a href="/keyword-position" class="tool-button">
+                        <span>Verificar Posición</span>
+                        <svg viewBox="0 0 24 24" class="button-icon">
+                            <path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <!-- 4. Comparador de Miniaturas -->
+            <div class="tool-card modern-card" data-category="design">
+                <div class="card-header">
+                    <div class="tool-icon">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M8.5,13.5L11,16.5L14.5,12L19,18H5M21,19V5C21,3.89 20.1,3 19,3H5A2,2 0 0,0 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19Z"/>
+                        </svg>
+                    </div>
+                    <div class="tool-badge design">Diseño</div>
+                </div>
+                <div class="card-content">
+                    <h3>Comparador de Miniaturas</h3>
+                    <p>Compara tu miniatura con los videos mejor posicionados. Incluye vista desktop y móvil para análisis completo.</p>
+                    <div class="tool-features">
+                        <span class="feature-tag">🖥️ Vista desktop</span>
+                        <span class="feature-tag">📱 Vista móvil</span>
+                        <span class="feature-tag">📊 Análisis competencia</span>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <a href="/thumbnail-comparison" class="tool-button">
+                        <span>Comparar Miniaturas</span>
+                        <svg viewBox="0 0 24 24" class="button-icon">
+                            <path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <!-- 5. Análisis de Actividad -->
+            <div class="tool-card modern-card" data-category="analytics">
+                <div class="card-header">
+                    <div class="tool-icon">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M16,6L18.29,8.29L13.41,13.17L9.41,9.17L2,16.59L3.41,18L9.41,12L13.41,16L19.71,9.71L22,12V6H16Z"/>
+                        </svg>
+                    </div>
+                    <div class="tool-badge analytics">Analytics</div>
+                </div>
+                <div class="card-content">
+                    <h3>Análisis de Actividad</h3>
+                    <p>Estima las visualizaciones recientes de un video basándose en la actividad de comentarios de los últimos 30 días.</p>
+                    <div class="tool-features">
+                        <span class="feature-tag">📅 30 días</span>
+                        <span class="feature-tag">💬 Análisis comentarios</span>
+                        <span class="feature-tag">📈 3 estimaciones</span>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <a href="/video-activity" class="tool-button">
+                        <span>Analizar Actividad</span>
+                        <svg viewBox="0 0 24 24" class="button-icon">
+                            <path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <!-- 6. Investigador de Keywords -->
+            <div class="tool-card modern-card featured" data-category="research">
+                <div class="featured-badge">✨ Nuevo</div>
+                <div class="card-header">
+                    <div class="tool-icon">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
+                            <path d="M12 10h-2v2H8v-2H6V8h2V6h2v2h2v2z"/>
+                        </svg>
+                    </div>
+                    <div class="tool-badge research">Research</div>
+                </div>
+                <div class="card-content">
+                    <h3>Investigador de Keywords</h3>
+                    <p>Descubre las sugerencias reales que YouTube proporciona cuando los usuarios buscan términos relacionados con tu nicho.</p>
+                    <div class="tool-features">
+                        <span class="feature-tag">🔍 Sugerencias reales</span>
+                        <span class="feature-tag">💾 Exportación múltiple</span>
+                        <span class="feature-tag">📊 Análisis inteligente</span>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <a href="/keyword-research" class="tool-button">
+                        <span>Investigar Keywords</span>
+                        <svg viewBox="0 0 24 24" class="button-icon">
+                            <path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <!-- 7. Informe Canal Competencia - PRÓXIMAMENTE -->
+            <div class="tool-card modern-card coming-soon" data-category="competition">
+                <div class="coming-soon-badge">🚧 Próximamente</div>
+                <div class="card-header">
+                    <div class="tool-icon">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M9,3V4H4V6H5V19A2,2 0 0,0 7,21H17A2,2 0 0,0 19,19V6H20V4H15V3H9M7,6H17V19H7V6M9,8V17H11V8H9M13,8V17H15V8H13Z"/>
+                        </svg>
+                    </div>
+                    <div class="tool-badge competition">Competencia</div>
+                </div>
+                <div class="card-content">
+                    <h3>📊 Informe Canal Competencia</h3>
+                    <p>Análisis completo del rendimiento de canales competidores con métricas detalladas de crecimiento y engagement.</p>
+                    <div class="tool-features">
+                        <span class="feature-tag">📈 Métricas completas</span>
+                        <span class="feature-tag">📊 Comparativa</span>
+                        <span class="feature-tag">📄 Informe PDF</span>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <button class="tool-button disabled">
+                        <span>Próximamente</span>
+                        <svg viewBox="0 0 24 24" class="button-icon">
+                            <path d="M12,1L21,5V11C21,16.55 17.16,21.74 12,23C6.84,21.74 3,16.55 3,11V5L12,1M12,7C10.89,7 10,7.89 10,9A2,2 0 0,0 12,11A2,2 0 0,0 14,9C14,7.89 13.11,7 12,7Z"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- 8. TOP 20 Videos Competencia - PRÓXIMAMENTE -->
+            <div class="tool-card modern-card coming-soon" data-category="competition">
+                <div class="coming-soon-badge">🚧 Próximamente</div>
+                <div class="card-header">
+                    <div class="tool-icon">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M16,6L18.29,8.29L13.41,13.17L9.41,9.17L2,16.59L3.41,18L9.41,12L13.41,16L19.71,9.71L22,12V6H16Z"/>
+                        </svg>
+                    </div>
+                    <div class="tool-badge competition">Competencia</div>
+                </div>
+                <div class="card-content">
+                    <h3>🏆 TOP 20 Videos Competencia</h3>
+                    <p>Descubre los videos más exitosos de tus competidores con análisis de rendimiento y estrategias ganadoras.</p>
+                    <div class="tool-features">
+                        <span class="feature-tag">🏆 Top videos</span>
+                        <span class="feature-tag">📊 Métricas</span>
+                        <span class="feature-tag">🎯 Estrategias</span>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <button class="tool-button disabled">
+                        <span>Próximamente</span>
+                        <svg viewBox="0 0 24 24" class="button-icon">
+                            <path d="M12,1L21,5V11C21,16.55 17.16,21.74 12,23C6.84,21.74 3,16.55 3,11V5L12,1M12,7C10.89,7 10,7.89 10,9A2,2 0 0,0 12,11A2,2 0 0,0 14,9C14,7.89 13.11,7 12,7Z"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- 9. Últimos 20 Videos Competencia - PRÓXIMAMENTE -->
+            <div class="tool-card modern-card coming-soon" data-category="competition">
+                <div class="coming-soon-badge">🚧 Próximamente</div>
+                <div class="card-header">
+                    <div class="tool-icon">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12,20A8,8 0 0,1 4,12A8,8 0 0,1 12,4A8,8 0 0,1 20,12A8,8 0 0,1 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M12.5,7V12.25L17,14.92L16.25,16.15L11,13V7H12.5Z"/>
+                        </svg>
+                    </div>
+                    <div class="tool-badge competition">Competencia</div>
+                </div>
+                <div class="card-content">
+                    <h3>📅 Últimos 20 Videos Competencia</h3>
+                    <p>Monitorea la actividad reciente de tus competidores y analiza sus últimas estrategias de contenido.</p>
+                    <div class="tool-features">
+                        <span class="feature-tag">⏰ Recientes</span>
+                        <span class="feature-tag">📈 Tendencias</span>
+                        <span class="feature-tag">🔍 Análisis</span>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <button class="tool-button disabled">
+                        <span>Próximamente</span>
+                        <svg viewBox="0 0 24 24" class="button-icon">
+                            <path d="M12,1L21,5V11C21,16.55 17.16,21.74 12,23C6.84,21.74 3,16.55 3,11V5L12,1M12,7C10.89,7 10,7.89 10,9A2,2 0 0,0 12,11A2,2 0 0,0 14,9C14,7.89 13.11,7 12,7Z"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- 10. Análisis Shorts Competencia - PRÓXIMAMENTE -->
+            <div class="tool-card modern-card coming-soon" data-category="shorts">
+                <div class="coming-soon-badge">🚧 Próximamente</div>
+                <div class="card-header">
+                    <div class="tool-icon">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M17,10.5V7A1,1 0 0,0 16,6H4A1,1 0 0,0 3,7V17A1,1 0 0,0 4,18H16A1,1 0 0,0 17,17V13.5L21,17.5V6.5L17,10.5Z"/>
+                        </svg>
+                    </div>
+                    <div class="tool-badge shorts">Shorts</div>
+                </div>
+                <div class="card-content">
+                    <h3>⚡ Análisis Shorts Competencia</h3>
+                    <p>Analiza el rendimiento de YouTube Shorts de tus competidores y descubre qué funciona en formato vertical.</p>
+                    <div class="tool-features">
+                        <span class="feature-tag">📱 Formato vertical</span>
+                        <span class="feature-tag">⚡ Viral analysis</span>
+                        <span class="feature-tag">🎬 Trends</span>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <button class="tool-button disabled">
+                        <span>Próximamente</span>
+                        <svg viewBox="0 0 24 24" class="button-icon">
+                            <path d="M12,1L21,5V11C21,16.55 17.16,21.74 12,23C6.84,21.74 3,16.55 3,11V5L12,1M12,7C10.89,7 10,7.89 10,9A2,2 0 0,0 12,11A2,2 0 0,0 14,9C14,7.89 13.11,7 12,7Z"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- 11. Resultados Shorts Keyword - PRÓXIMAMENTE -->
+            <div class="tool-card modern-card coming-soon" data-category="shorts">
+                <div class="coming-soon-badge">🚧 Próximamente</div>
+                <div class="card-header">
+                    <div class="tool-icon">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M9.5,3A6.5,6.5 0 0,1 16,9.5C16,11.11 15.41,12.59 14.44,13.73L14.71,14H15.5L20.5,19L19,20.5L14,15.5V14.71L13.73,14.44C12.59,15.41 11.11,16 9.5,16A6.5,6.5 0 0,1 3,9.5A6.5,6.5 0 0,1 9.5,3M9.5,5C7,5 5,7 5,9.5C5,12 7,14 9.5,14C12,14 14,12 14,9.5C14,7 12,5 9.5,5Z"/>
+                        </svg>
+                    </div>
+                    <div class="tool-badge shorts">Shorts</div>
+                </div>
+                <div class="card-content">
+                    <h3>🔍 Resultados Shorts Keyword</h3>
+                    <p>Busca y analiza YouTube Shorts específicos por palabras clave para entender tendencias en formato corto.</p>
+                    <div class="tool-features">
+                        <span class="feature-tag">🔍 Búsqueda específica</span>
+                        <span class="feature-tag">📊 Analytics</span>
+                        <span class="feature-tag">🎯 Keywords</span>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <button class="tool-button disabled">
+                        <span>Próximamente</span>
+                        <svg viewBox="0 0 24 24" class="button-icon">
+                            <path d="M12,1L21,5V11C21,16.55 17.16,21.74 12,23C6.84,21.74 3,16.55 3,11V5L12,1M12,7C10.89,7 10,7.89 10,9A2,2 0 0,0 12,11A2,2 0 0,0 14,9C14,7.89 13.11,7 12,7Z"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- 12. Comparador de Rendimiento - PRÓXIMAMENTE -->
+            <div class="tool-card modern-card coming-soon" data-category="performance">
+                <div class="coming-soon-badge">🚧 Próximamente</div>
+                <div class="card-header">
+                    <div class="tool-icon">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M19,3H5C3.9,3 3,3.9 3,5V19C3,20.1 3.9,21 5,21H19C20.1,21 21,20.1 21,19V5C21,3.9 20.1,3 19,3M19,19H5V5H19V19M17,17H7V15H17V17M17,13H7V11H17V13M17,9H7V7H17V9Z"/>
+                        </svg>
+                    </div>
+                    <div class="tool-badge performance">Performance</div>
+                </div>
+                <div class="card-content">
+                    <h3>⚖️ Comparador de Rendimiento</h3>
+                    <p>Compara métricas de rendimiento entre múltiples canales o videos para identificar oportunidades de mejora.</p>
+                    <div class="tool-features">
+                        <span class="feature-tag">⚖️ Comparativa</span>
+                        <span class="feature-tag">📊 Métricas</span>
+                        <span class="feature-tag">📈 Benchmarks</span>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <button class="tool-button disabled">
+                        <span>Próximamente</span>
+                        <svg viewBox="0 0 24 24" class="button-icon">
+                            <path d="M12,1L21,5V11C21,16.55 17.16,21.74 12,23C6.84,21.74 3,16.55 3,11V5L12,1M12,7C10.89,7 10,7.89 10,9A2,2 0 0,0 12,11A2,2 0 0,0 14,9C14,7.89 13.11,7 12,7Z"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- 13. Detector de Tendencias - PRÓXIMAMENTE -->
+            <div class="tool-card modern-card coming-soon" data-category="trends">
+                <div class="coming-soon-badge">🚧 Próximamente</div>
+                <div class="card-header">
+                    <div class="tool-icon">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M16,6L18.29,8.29L13.41,13.17L9.41,9.17L2,16.59L3.41,18L9.41,12L13.41,16L19.71,9.71L22,12V6H16Z"/>
+                        </svg>
+                    </div>
+                    <div class="tool-badge trends">Tendencias</div>
+                </div>
+                <div class="card-content">
+                    <h3>🔥 Detector de Tendencias</h3>
+                    <p>Identifica tendencias emergentes en YouTube antes que la competencia y aprovecha oportunidades de contenido viral.</p>
+                    <div class="tool-features">
+                        <span class="feature-tag">🔥 Trending topics</span>
+                        <span class="feature-tag">📈 Predicciones</span>
+                        <span class="feature-tag">⏰ Early detection</span>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <button class="tool-button disabled">
+                        <span>Próximamente</span>
+                        <svg viewBox="0 0 24 24" class="button-icon">
+                            <path d="M12,1L21,5V11C21,16.55 17.16,21.74 12,23C6.84,21.74 3,16.55 3,11V5L12,1M12,7C10.89,7 10,7.89 10,9A2,2 0 0,0 12,11A2,2 0 0,0 14,9C14,7.89 13.11,7 12,7Z"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- 14. Análisis Comentarios Competencia - PRÓXIMAMENTE -->
+            <div class="tool-card modern-card coming-soon" data-category="comments">
+                <div class="coming-soon-badge">🚧 Próximamente</div>
+                <div class="card-header">
+                    <div class="tool-icon">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M9,22A1,1 0 0,1 8,21V18H4A2,2 0 0,1 2,16V4C2,2.89 2.9,2 4,2H20A2,2 0 0,1 22,4V16A2,2 0 0,1 20,18H13.9L10.2,21.71C10,21.9 9.75,22 9.5,22V22H9Z"/>
+                        </svg>
+                    </div>
+                    <div class="tool-badge comments">Comentarios</div>
+                </div>
+                <div class="card-content">
+                    <h3>💬 Análisis Comentarios Competencia</h3>
+                    <p>Analiza los comentarios de videos de la competencia para entender qué resonancia tiene su audiencia.</p>
+                    <div class="tool-features">
+                        <span class="feature-tag">💬 Sentiment analysis</span>
+                        <span class="feature-tag">🎯 Insights</span>
+                        <span class="feature-tag">📊 Engagement</span>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <button class="tool-button disabled">
+                        <span>Próximamente</span>
+                        <svg viewBox="0 0 24 24" class="button-icon">
+                            <path d="M12,1L21,5V11C21,16.55 17.16,21.74 12,23C6.84,21.74 3,16.55 3,11V5L12,1M12,7C10.89,7 10,7.89 10,9A2,2 0 0,0 12,11A2,2 0 0,0 14,9C14,7.89 13.11,7 12,7Z"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- 15. Predictor de Rendimiento - PRÓXIMAMENTE -->
+            <div class="tool-card modern-card coming-soon" data-category="prediction">
+                <div class="coming-soon-badge">🚧 Próximamente</div>
+                <div class="card-header">
+                    <div class="tool-icon">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12,2A2,2 0 0,1 14,4C14,4.74 13.6,5.39 13,5.73V7H14A7,7 0 0,1 21,14H22A1,1 0 0,1 23,15V18A1,1 0 0,1 22,19H21V20A2,2 0 0,1 19,22H5A2,2 0 0,1 3,20V19H2A1,1 0 0,1 1,18V15A1,1 0 0,1 2,14H3A7,7 0 0,1 10,7H11V5.73C10.4,5.39 10,4.74 10,4A2,2 0 0,1 12,2Z"/>
+                        </svg>
+                    </div>
+                    <div class="tool-badge prediction">Predicción</div>
+                </div>
+                <div class="card-content">
+                    <h3>🎯 Predictor de Rendimiento</h3>
+                    <p>Utiliza IA para predecir el rendimiento potencial de tus videos antes de publicarlos basándose en datos históricos.</p>
+                    <div class="tool-features">
+                        <span class="feature-tag">🤖 IA Predictiva</span>
+                        <span class="feature-tag">📊 Análisis histórico</span>
+                        <span class="feature-tag">🎯 Proyecciones</span>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <button class="tool-button disabled">
+                        <span>Próximamente</span>
+                        <svg viewBox="0 0 24 24" class="button-icon">
+                            <path d="M12,1L21,5V11C21,16.55 17.16,21.74 12,23C6.84,21.74 3,16.55 3,11V5L12,1M12,7C10.89,7 10,7.89 10,9A2,2 0 0,0 12,11A2,2 0 0,0 14,9C14,7.89 13.11,7 12,7Z"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section">
+        <div class="section-header">
+            <h2 class="section-title">¿Por qué elegir nuestras herramientas?</h2>
+        </div>
+
+        <div class="features-grid">
+            <div class="feature-item">
+                <div class="feature-icon">🚀</div>
+                <h3>Rápido y Eficiente</h3>
+                <p>Resultados instantáneos sin esperas innecesarias</p>
+            </div>
+            <div class="feature-item">
+                <div class="feature-icon">🎯</div>
+                <h3>Datos Precisos</h3>
+                <p>Información directa de la API oficial de YouTube</p>
+            </div>
+            <div class="feature-item">
+                <div class="feature-icon">💰</div>
+                <h3>100% Gratuito</h3>
+                <p>Todas las herramientas sin costo ni límites</p>
+            </div>
+            <div class="feature-item">
+                <div class="feature-icon">📱</div>
+                <h3>Responsive</h3>
+                <p>Funciona perfectamente en todos los dispositivos</p>
+            </div>
+        </div>
+    </section>
+</div>
+
+<style>
+/* Variables modernas */
+:root {
+    --gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    --gradient-secondary: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    --gradient-accent: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+    --gradient-youtube: linear-gradient(135deg, #FF0000 0%, #CC0000 100%);
+    --shadow-soft: 0 10px 40px rgba(0, 0, 0, 0.1);
+    --shadow-hover: 0 20px 60px rgba(0, 0, 0, 0.2);
+    --border-radius: 20px;
+    --animation-speed: 0.4s;
+}
+
+.modern-container {
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    overflow-x: hidden;
+}
+
+/* Hero Section */
+.hero-section {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    overflow: hidden;
+}
+
+.hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0.3) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 40% 40%, rgba(120, 119, 198, 0.2) 0%, transparent 50%);
+}
+
+.floating-icons {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.floating-icon {
+    position: absolute;
+    font-size: 2rem;
+    opacity: 0.1;
+    animation: float var(--duration, 20s) ease-in-out infinite;
+    animation-delay: var(--delay, 0s);
+}
+
+.floating-icon:nth-child(1) { top: 10%; left: 10%; }
+.floating-icon:nth-child(2) { top: 20%; right: 20%; }
+.floating-icon:nth-child(3) { top: 60%; left: 15%; }
+.floating-icon:nth-child(4) { bottom: 30%; right: 10%; }
+.floating-icon:nth-child(5) { bottom: 20%; left: 30%; }
+.floating-icon:nth-child(6) { top: 40%; right: 40%; }
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    33% { transform: translateY(-30px) rotate(10deg); }
+    66% { transform: translateY(20px) rotate(-5deg); }
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    padding: 0 20px;
+}
+
+.hero-logo {
+    margin-bottom: 2rem;
+}
+
+.logo-container {
+    position: relative;
+    display: inline-block;
+}
+
+.youtube-icon {
+    width: 100px;
+    height: 100px;
+    fill: white;
+    filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.3));
+    animation: pulse 2s ease-in-out infinite;
+}
+
+.logo-glow {
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    right: -20px;
+    bottom: -20px;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.2) 0%, transparent 70%);
+    border-radius: 50%;
+    animation: glow 3s ease-in-out infinite alternate;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
+
+@keyframes glow {
+    0% { opacity: 0.5; transform: scale(1); }
+    100% { opacity: 0.8; transform: scale(1.1); }
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+}
+
+.gradient-text {
+    background: linear-gradient(45deg, #ffffff, #f0f0f0, #ffffff);
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shimmer 3s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    font-weight: 400;
+    opacity: 0.9;
+}
+
+.hero-description {
+    font-size: 1.3rem;
+    line-height: 1.6;
+    margin-bottom: 3rem;
+    opacity: 0.9;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero-stats {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    margin-top: 3rem;
+}
+
+.stat-item {
+    text-align: center;
+}
+
+.stat-number {
+    font-size: 3rem;
+    font-weight: 800;
+    color: #ffffff;
+    text-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.stat-label {
+    font-size: 1rem;
+    opacity: 0.8;
+    margin-top: 0.5rem;
+}
+
+/* Tools Section */
+.tools-section {
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 10%);
+    padding: 6rem 20px 4rem;
+    position: relative;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+}
+
+.section-description {
+    font-size: 1.2rem;
+    color: #666;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* GRID PARA 15 HERRAMIENTAS */
+.tools-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+.modern-card {
+    background: white;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-soft);
+    transition: all var(--animation-speed) ease;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    min-height: 400px;
+}
+
+.modern-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-hover);
+}
+
+.modern-card.featured {
+    border: 2px solid transparent;
+    background: linear-gradient(white, white) padding-box,
+                var(--gradient-youtube) border-box;
+    animation: featuredGlow 3s ease-in-out infinite alternate;
+}
+
+/* Estilos para herramientas próximamente */
+.modern-card.coming-soon {
+    opacity: 0.8;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    border: 2px dashed #dee2e6;
+}
+
+.modern-card.coming-soon:hover {
+    transform: translateY(-5px);
+    opacity: 0.9;
+}
+
+.coming-soon-badge {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: linear-gradient(135deg, #ffc107 0%, #ff8f00 100%);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    z-index: 2;
+    box-shadow: 0 2px 10px rgba(255, 193, 7, 0.3);
+}
+
+@keyframes featuredGlow {
+    0% { box-shadow: var(--shadow-soft); }
+    100% { box-shadow: 0 10px 40px rgba(255, 0, 0, 0.2); }
+}
+
+.featured-badge {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: var(--gradient-youtube);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    z-index: 2;
+}
+
+.card-header {
+    padding: 2rem 2rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.tool-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--gradient-primary);
+    color: white;
+    box-shadow: 0 5px 20px rgba(102, 126, 234, 0.3);
+}
+
+.tool-icon svg {
+    width: 28px;
+    height: 28px;
+}
+
+.tool-badge {
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    background: rgba(102, 126, 234, 0.1);
+    color: #667eea;
+}
+
+.tool-badge.seo { background: rgba(76, 175, 80, 0.1); color: #4caf50; }
+.tool-badge.analysis { background: rgba(255, 152, 0, 0.1); color: #ff9800; }
+.tool-badge.design { background: rgba(233, 30, 99, 0.1); color: #e91e63; }
+.tool-badge.analytics { background: rgba(63, 81, 181, 0.1); color: #3f51b5; }
+.tool-badge.research { background: rgba(156, 39, 176, 0.1); color: #9c27b0; }
+.tool-badge.competition { background: rgba(255, 87, 34, 0.1); color: #ff5722; }
+.tool-badge.shorts { background: rgba(96, 125, 139, 0.1); color: #607d8b; }
+.tool-badge.performance { background: rgba(0, 150, 136, 0.1); color: #009688; }
+.tool-badge.trends { background: rgba(255, 193, 7, 0.1); color: #ffc107; }
+.tool-badge.comments { background: rgba(121, 85, 72, 0.1); color: #795548; }
+.tool-badge.prediction { background: rgba(103, 58, 183, 0.1); color: #673ab7; }
+
+.card-content {
+    padding: 0 2rem 1.5rem;
+}
+
+.card-content h3 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--secondary-color);
+    margin-bottom: 0.75rem;
+}
+
+.card-content p {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.tool-features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.feature-tag {
+    background: rgba(102, 126, 234, 0.1);
+    color: #667eea;
+    padding: 0.3rem 0.8rem;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.card-footer {
+    padding: 0 2rem 2rem;
+}
+
+.tool-button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    background: var(--gradient-primary);
+    color: white;
+    padding: 1rem 1.5rem;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all var(--animation-speed) ease;
+    box-shadow: 0 5px 20px rgba(102, 126, 234, 0.3);
+    border: none;
+    cursor: pointer;
+}
+
+.tool-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(102, 126, 234, 0.4);
+}
+
+.tool-button.disabled {
+    background: linear-gradient(135deg, #6c757d 0%, #5a6268 100%);
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+.tool-button.disabled:hover {
+    transform: none;
+    box-shadow: 0 5px 20px rgba(108, 117, 125, 0.3);
+}
+
+.button-icon {
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+    transition: transform var(--animation-speed) ease;
+}
+
+.tool-button:hover .button-icon {
+    transform: translateX(5px);
+}
+
+.tool-button.disabled:hover .button-icon {
+    transform: none;
+}
+
+/* Features Section */
+.features-section {
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    padding: 4rem 20px;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.feature-item {
+    background: white;
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    text-align: center;
+    box-shadow: var(--shadow-soft);
+    transition: transform var(--animation-speed) ease;
+}
+
+.feature-item:hover {
+    transform: translateY(-5px);
+}
+
+.feature-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.feature-item h3 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--secondary-color);
+    margin-bottom: 0.75rem;
+}
+
+.feature-item p {
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Efectos especiales para categorías */
+.modern-card[data-category="utility"] .tool-icon {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.modern-card[data-category="seo"] .tool-icon {
+    background: linear-gradient(135deg, #4caf50 0%, #45a049 100%);
+}
+
+.modern-card[data-category="analysis"] .tool-icon {
+    background: linear-gradient(135deg, #ff9800 0%, #f57c00 100%);
+}
+
+.modern-card[data-category="design"] .tool-icon {
+    background: linear-gradient(135deg, #e91e63 0%, #c2185b 100%);
+}
+
+.modern-card[data-category="analytics"] .tool-icon {
+    background: linear-gradient(135deg, #3f51b5 0%, #303f9f 100%);
+}
+
+.modern-card[data-category="research"] .tool-icon {
+    background: linear-gradient(135deg, #9c27b0 0%, #7b1fa2 100%);
+}
+
+.modern-card[data-category="competition"] .tool-icon {
+    background: linear-gradient(135deg, #ff5722 0%, #d84315 100%);
+}
+
+.modern-card[data-category="shorts"] .tool-icon {
+    background: linear-gradient(135deg, #607d8b 0%, #455a64 100%);
+}
+
+.modern-card[data-category="performance"] .tool-icon {
+    background: linear-gradient(135deg, #009688 0%, #00695c 100%);
+}
+
+.modern-card[data-category="trends"] .tool-icon {
+    background: linear-gradient(135deg, #ffc107 0%, #ff8f00 100%);
+}
+
+.modern-card[data-category="comments"] .tool-icon {
+    background: linear-gradient(135deg, #795548 0%, #5d4037 100%);
+}
+
+.modern-card[data-category="prediction"] .tool-icon {
+    background: linear-gradient(135deg, #673ab7 0%, #512da8 100%);
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .tools-grid {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 1.5rem;
+        padding: 0 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .hero-description {
+        font-size: 1.1rem;
+    }
+    
+    .hero-stats {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    
+    .stat-number {
+        font-size: 2.5rem;
+    }
+    
+    .tools-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .section-description {
+        font-size: 1rem;
+    }
+    
+    .card-header,
+    .card-content,
+    .card-footer {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+    
+    .features-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 2rem;
+    }
+    
+    .subtitle {
+        font-size: 1rem;
+    }
+    
+    .hero-description {
+        font-size: 1rem;
+        padding: 0 1rem;
+    }
+    
+    .tools-section,
+    .features-section {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    
+    .modern-card {
+        margin: 0 0.5rem;
+    }
+    
+    .youtube-icon {
+        width: 80px;
+        height: 80px;
+    }
+    
+    .floating-icon {
+        font-size: 1.5rem;
+    }
+}
+
+/* Animaciones adicionales */
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.modern-card {
+    animation: slideInUp 0.6s ease-out;
+    animation-fill-mode: both;
+}
+
+.modern-card:nth-child(1) { animation-delay: 0.1s; }
+.modern-card:nth-child(2) { animation-delay: 0.2s; }
+.modern-card:nth-child(3) { animation-delay: 0.3s; }
+.modern-card:nth-child(4) { animation-delay: 0.4s; }
+.modern-card:nth-child(5) { animation-delay: 0.5s; }
+.modern-card:nth-child(6) { animation-delay: 0.6s; }
+.modern-card:nth-child(7) { animation-delay: 0.7s; }
+.modern-card:nth-child(8) { animation-delay: 0.8s; }
+.modern-card:nth-child(9) { animation-delay: 0.9s; }
+.modern-card:nth-child(10) { animation-delay: 1.0s; }
+.modern-card:nth-child(11) { animation-delay: 1.1s; }
+.modern-card:nth-child(12) { animation-delay: 1.2s; }
+.modern-card:nth-child(13) { animation-delay: 1.3s; }
+.modern-card:nth-child(14) { animation-delay: 1.4s; }
+.modern-card:nth-child(15) { animation-delay: 1.5s; }
+
+/* Scroll smooth para toda la página */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Mejoras de accesibilidad */
+.tool-button:focus,
+.modern-card:focus {
+    outline: 3px solid rgba(102, 126, 234, 0.5);
+    outline-offset: 2px;
+}
+
+/* Efectos de partículas en hover */
+.modern-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, transparent 30%, rgba(255, 255, 255, 0.1) 50%, transparent 70%);
+    transform: translateX(-100%);
+    transition: transform 0.6s ease;
+    pointer-events: none;
+}
+
+.modern-card:hover::before {
+    transform: translateX(100%);
+}
+
+/* Estados de carga suaves */
+.modern-card,
+.feature-item {
+    opacity: 0;
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Delays escalonados para animaciones */
+.feature-item:nth-child(1) { animation-delay: 0.1s; }
+.feature-item:nth-child(2) { animation-delay: 0.2s; }
+.feature-item:nth-child(3) { animation-delay: 0.3s; }
+.feature-item:nth-child(4) { animation-delay: 0.4s; }
+
+/* Efecto especial para herramientas próximamente */
+.coming-soon-badge {
+    animation: pulse-warning 2s ease-in-out infinite;
+}
+
+@keyframes pulse-warning {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
+
+/* Efecto de construcción para cards próximamente */
+.modern-card.coming-soon .tool-icon {
+    background: linear-gradient(135deg, #6c757d 0%, #adb5bd 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.modern-card.coming-soon .tool-icon::after {
+    content: '⚙️';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 14px;
+    animation: rotate 2s linear infinite;
+}
+
+@keyframes rotate {
+    from { transform: translate(-50%, -50%) rotate(0deg); }
+    to { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+/* Tooltip para herramientas próximamente */
+.modern-card.coming-soon:hover::after {
+    content: 'Esta herramienta estará disponible próximamente';
+    position: absolute;
+    bottom: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.9);
+    color: white;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    white-space: nowrap;
+    z-index: 1000;
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateX(-50%) translateY(10px); }
+    to { opacity: 1; transform: translateX(-50%) translateY(0); }
+}
+</style>
+
+<script>
+// Efecto parallax suave para el hero
+window.addEventListener('scroll', () => {
+    const scrolled = window.pageYOffset;
+    const heroContent = document.querySelector('.hero-content');
+    const floatingIcons = document.querySelectorAll('.floating-icon');
+    
+    if (heroContent) {
+        heroContent.style.transform = `translateY(${scrolled * 0.5}px)`;
+        heroContent.style.opacity = Math.max(0, 1 - scrolled / 600);
+    }
+    
+    floatingIcons.forEach((icon, index) => {
+        const speed = 0.2 + (index * 0.1);
+        icon.style.transform = `translateY(${scrolled * speed}px) rotate(${scrolled * 0.1}deg)`;
+    });
+});
+
+// Animación de entrada para las cards cuando entran en viewport
+const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+};
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.style.animationPlayState = 'running';
+        }
+    });
+}, observerOptions);
+
+// Observar todas las cards
+document.addEventListener('DOMContentLoaded', () => {
+    const cards = document.querySelectorAll('.modern-card, .feature-item');
+    cards.forEach(card => {
+        card.style.animationPlayState = 'paused';
+        observer.observe(card);
+    });
+    
+    // Verificar que todas las 15 herramientas estén presentes
+    const toolCards = document.querySelectorAll('.tool-card');
+    console.log(`Total de herramientas encontradas: ${toolCards.length}`);
+    
+    if (toolCards.length !== 15) {
+        console.warn('⚠️ No se están mostrando las 15 herramientas esperadas');
+    }
+    
+    // Forzar visibilidad de todas las cards
+    toolCards.forEach((card, index) => {
+        card.style.display = 'block';
+        card.style.visibility = 'visible';
+        card.style.opacity = '1';
+        console.log(`Herramienta ${index + 1}: ${card.querySelector('h3').textContent}`);
+    });
+});
+
+// Efecto de hover mejorado para las cards
+document.querySelectorAll('.modern-card').forEach(card => {
+    card.addEventListener('mouseenter', function() {
+        if (!this.classList.contains('coming-soon')) {
+            this.style.transform = 'translateY(-10px) scale(1.02)';
+        } else {
+            this.style.transform = 'translateY(-5px) scale(1.01)';
+        }
+    });
+    
+    card.addEventListener('mouseleave', function() {
+        this.style.transform = 'translateY(0) scale(1)';
+    });
+});
+
+// Efecto especial para botones deshabilitados
+document.querySelectorAll('.tool-button.disabled').forEach(button => {
+    button.addEventListener('click', function(e) {
+        e.preventDefault();
+        
+        // Efecto de shake
+        this.style.animation = 'shake 0.5s ease-in-out';
+        
+        setTimeout(() => {
+            this.style.animation = '';
+        }, 500);
+        
+        // Mostrar mensaje temporal
+        const message = document.createElement('div');
+        message.textContent = '¡Esta herramienta estará disponible muy pronto!';
+        message.style.cssText = `
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: linear-gradient(135deg, #ffc107 0%, #ff8f00 100%);
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 12px;
+            font-weight: 600;
+            z-index: 10000;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            animation: bounceIn 0.5s ease-out;
+        `;
+        
+        document.body.appendChild(message);
+        
+        setTimeout(() => {
+            message.style.animation = 'bounceOut 0.5s ease-in forwards';
+            setTimeout(() => {
+                document.body.removeChild(message);
+            }, 500);
+        }, 2000);
+    });
+});
+
+// Preloader suave
+window.addEventListener('load', () => {
+    document.body.classList.add('loaded');
+});
+
+// Contador animado para las estadísticas del hero
+function animateCounter(element, target, duration = 2000) {
+    const start = 0;
+    const increment = target / (duration / 16);
+    let current = start;
+    
+    const timer = setInterval(() => {
+        current += increment;
+        if (current >= target) {
+            current = target;
+            clearInterval(timer);
+        }
+        
+        if (target === 15) {
+            element.textContent = Math.floor(current);
+        } else if (target === 100) {
+            element.textContent = Math.floor(current) + '%';
+        } else {
+            element.textContent = '∞';
+        }
+    }, 16);
+}
+
+// Inicializar contadores cuando el hero sea visible
+const heroObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            const statNumbers = document.querySelectorAll('.stat-number');
+            animateCounter(statNumbers[0], 15);
+            animateCounter(statNumbers[1], 100);
+            // El tercer contador (∞) no necesita animación
+            heroObserver.unobserve(entry.target);
+        }
+    });
+}, { threshold: 0.5 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    const heroStats = document.querySelector('.hero-stats');
+    if (heroStats) {
+        heroObserver.observe(heroStats);
+    }
+});
+</script>
+
+<!-- Agregar keyframes adicionales para animaciones -->
+<style>
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    75% { transform: translateX(5px); }
+}
+
+@keyframes bounceIn {
+    0% { transform: translate(-50%, -50%) scale(0.3); opacity: 0; }
+    50% { transform: translate(-50%, -50%) scale(1.05); }
+    70% { transform: translate(-50%, -50%) scale(0.9); }
+    100% { transform: translate(-50%, -50%) scale(1); opacity: 1; }
+}
+
+@keyframes bounceOut {
+    0% { transform: translate(-50%, -50%) scale(1); opacity: 1; }
+    100% { transform: translate(-50%, -50%) scale(0.3); opacity: 0; }
+}
+
+/* Mejoras visuales adicionales */
+.modern-card.coming-soon .card-content h3 {
+    color: #6c757d;
+}
+
+.modern-card.coming-soon .card-content p {
+    color: #868e96;
+}
+
+.modern-card.coming-soon .feature-tag {
+    background: rgba(108, 117, 125, 0.1);
+    color: #6c757d;
+}
+
+/* Indicador de progreso para herramientas próximamente */
+.modern-card.coming-soon::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #ffc107 0%, #ff8f00 100%);
+    animation: loadingBar 3s ease-in-out infinite;
+}
+
+@keyframes loadingBar {
+    0% { width: 0%; }
+    50% { width: 70%; }
+    100% { width: 0%; }
+}
+</style>
+</body>
+</html>

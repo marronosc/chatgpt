@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block title %}Error - Análisis SEO{% endblock %}
+
+{% block content %}
+<div class="error-container">
+    <div class="error-header">
+        <div class="error-icon">⚠️</div>
+        <h1>Error en el Análisis SEO</h1>
+    </div>
+    
+    <div class="error-content">
+        <div class="error-message">
+            <h3>No se pudo completar el análisis</h3>
+            <p>Se ha producido un error al procesar la búsqueda para "<strong>{{ keyword }}</strong>".</p>
+        </div>
+        
+        <div class="error-details">
+            <details>
+                <summary>Ver detalles del error</summary>
+                <pre>{{ error }}</pre>
+            </details>
+        </div>
+        
+        <div class="error-suggestions">
+            <h4>Posibles soluciones:</h4>
+            <ul>
+                <li>🔑 <strong>API Key:</strong> Verifica que la API key de YouTube esté configurada correctamente</li>
+                <li>📝 <strong>Palabra clave:</strong> Intenta con una palabra clave diferente</li>
+                <li>🔄 <strong>Reintentar:</strong> El problema podría ser temporal, intenta de nuevo</li>
+                <li>🌐 <strong>Conexión:</strong> Verifica tu conexión a internet</li>
+            </ul>
+        </div>
+        
+        <div class="error-actions">
+            <a href="/seo" class="button">🔄 Intentar de nuevo</a>
+            <a href="/" class="button secondary">🏠 Volver al inicio</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

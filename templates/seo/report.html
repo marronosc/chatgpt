@@ -1,0 +1,47 @@
+{% for video in videos %}
+            <div class="video-card{% if video.video_id %} has-analysis{% endif %}">
+                <div class="video-thumbnail">
+                    <img src="{{ video.thumbnail_url }}" alt="Miniatura del video" loading="lazy">
+                    <div class="video-duration">{{ format_duration(video.duration) }}</div>
+                </div>
+                <div class="video-info">
+                    <h3><a href="{{ video.video_url }}" target="_blank" rel="noopener">{{ video.title }}</a></h3>
+                    <p class="channel-name">📺 {{ video.channel_title }}</p>
+                    <div class="video-stats">
+                        <div class="stat">
+                            <span class="stat-icon">👁️</span>
+                            <span>{{ format_number(video.views) }}</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-icon">👍</span>
+                            <span>{{ format_number(video.likes) }}</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-icon">💬</span>
+                            <span>{{ format_number(video.comments) }}</span>
+                        </div>
+                    </div>
+                    <div class="video-meta">
+                        <span>📅 {{ format_date(video.published_at) }}</span>
+                        <span>🏷️ {{ video.category }}</span>
+                    </div>
+                    {% if video.video_id %}
+                    <div class="video-actions">
+                        <a href="{{ url_for('seo.analyze_video', video_id=video.video_id, title=video.title) }}" 
+                           class="analyze-button" 
+                           target="_blank"
+                           title="Analiza la estructura narrativa de este video con IA"
+                           onclick="this.classList.add('loading'); this.innerHTML='<span>Analizando...</span>'">
+                            <span>🧠 Analizar Video</span>
+                        </a>
+                    </div>
+                    {% else %}
+                    <div class="video-actions">
+                        <span class="no-analysis" title="Este video no tiene ID disponible para análisis">
+                            🚫 Análisis no disponible
+                        </span>
+                    </div>
+                    {% endif %}
+                </div>
+            </div>
+            {% endfor %}

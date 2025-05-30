@@ -1,0 +1,154 @@
+{% extends "base.html" %}
+
+{% block title %}Investigador de Keywords{% endblock %}
+
+{% block content %}
+<div class="keyword-research-container">
+    <div class="keyword-research-header">
+        <div class="logo">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
+                <path d="M9.5 8.5c-.83 0-1.5.67-1.5 1.5h1c0-.28.22-.5.5-.5s.5.22.5.5-.22.5-.5.5H8v1h1.5c.83 0 1.5-.67 1.5-1.5s-.67-1.5-1.5-1.5z"/>
+            </svg>
+        </div>
+        <h1>Investigador de Keywords</h1>
+        <p>Descubre qué sugiere YouTube cuando los usuarios buscan palabras clave relacionadas con tu contenido</p>
+    </div>
+    
+    {% if error %}
+        <div class="error-message">
+            <h3>❌ Error</h3>
+            <p>{{ error }}</p>
+        </div>
+    {% endif %}
+    
+    <form method="post" class="keyword-research-form">
+        <div class="form-group">
+            <label for="keyword">Palabra clave base:</label>
+            <input type="text" name="keyword" id="keyword" 
+                   placeholder="Ej: yoga para principiantes" 
+                   maxlength="100" 
+                   required>
+            <small>Introduce una palabra clave y descubre todas las sugerencias que YouTube proporciona</small>
+        </div>
+        
+        <input type="submit" value="Buscar Sugerencias" class="button">
+    </form>
+    
+    <div class="info-section">
+        <h3>¿Qué hace esta herramienta?</h3>
+        <div class="analysis-features">
+            <div class="feature">
+                <div class="feature-icon">🔍</div>
+                <div class="feature-content">
+                    <h4>Sugerencias Reales</h4>
+                    <p>Obtén las mismas sugerencias que YouTube muestra a los usuarios cuando buscan</p>
+                </div>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">📊</div>
+                <div class="feature-content">
+                    <h4>Ideas de Contenido</h4>
+                    <p>Descubre variaciones y temas relacionados que tu audiencia está buscando</p>
+                </div>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">💾</div>
+                <div class="feature-content">
+                    <h4>Exportación</h4>
+                    <p>Descarga las sugerencias en formato TXT, CSV o JSON para uso posterior</p>
+                </div>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">📋</div>
+                <div class="feature-content">
+                    <h4>Copia Rápida</h4>
+                    <p>Copia todas las sugerencias de una vez para usar en otras herramientas</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="tips-section">
+        <h3>💡 Consejos para mejores resultados</h3>
+        <ul>
+            <li><strong>Palabras específicas:</strong> Usa términos relacionados con tu nicho o tema principal</li>
+            <li><strong>Variaciones:</strong> Prueba diferentes formas de decir lo mismo (ej: "tutorial", "cómo hacer", "aprende")</li>
+            <li><strong>Long tail:</strong> Palabras más largas suelen tener menos competencia pero audiencia más específica</li>
+            <li><strong>Tendencias:</strong> Las sugerencias reflejan lo que la gente busca actualmente en YouTube</li>
+            <li><strong>Ideas de series:</strong> Usa las sugerencias para crear series de videos relacionados</li>
+        </ul>
+    </div>
+    
+    <a href="/" class="home-link">← Volver a la página principal</a>
+</div>
+
+<style>
+.keyword-research-container {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 0 20px;
+}
+
+.keyword-research-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.keyword-research-form {
+    background-color: var(--card-background);
+    border-radius: 12px;
+    padding: 2rem;
+    margin-bottom: 3rem;
+    box-shadow: 0 4px 6px var(--shadow-color);
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: var(--secondary-color);
+}
+
+.form-group input {
+    width: 100%;
+    padding: 1rem;
+    border: 2px solid #e9ecef;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(255, 0, 0, 0.1);
+}
+
+.form-group small {
+    display: block;
+    margin-top: 0.5rem;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.error-message {
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    color: var(--error-color);
+}
+
+@media (max-width: 768px) {
+    .keyword-research-container {
+        padding: 0 15px;
+    }
+}
+</style>
+{% endblock %}

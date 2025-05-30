@@ -1,0 +1,127 @@
+{% extends "base.html" %}
+
+{% block title %}Error - Análisis de Actividad{% endblock %}
+
+{% block extra_css %}
+<style>
+.error-container {
+    max-width: 600px;
+    margin: 4rem auto;
+    padding: 0 20px;
+}
+
+.error-card {
+    background: white;
+    border-radius: 20px;
+    padding: 3rem;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.error-icon {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+}
+
+.error-title {
+    font-size: 1.8rem;
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+}
+
+.error-message {
+    background-color: #fee;
+    border: 1px solid #fcc;
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin: 2rem 0;
+    color: #c33;
+    text-align: left;
+}
+
+.error-details {
+    margin: 2rem 0;
+}
+
+.error-details summary {
+    cursor: pointer;
+    font-weight: 600;
+    color: #666;
+}
+
+.error-details pre {
+    background-color: #f8f9fa;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-top: 1rem;
+    font-size: 0.85rem;
+    overflow-x: auto;
+    text-align: left;
+}
+
+.error-suggestions {
+    text-align: left;
+    background: #e7f3ff;
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin: 2rem 0;
+}
+
+.error-suggestions h4 {
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+}
+
+.error-suggestions ul {
+    margin-left: 1.5rem;
+}
+
+.error-suggestions li {
+    margin-bottom: 0.5rem;
+    color: #555;
+}
+
+.error-actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 2rem;
+}
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="error-container">
+    <div class="error-card">
+        <div class="error-icon">😕</div>
+        <h1 class="error-title">No se pudo completar el análisis</h1>
+        
+        <div class="error-message">
+            <p>{{ error }}</p>
+        </div>
+        
+        <div class="error-details">
+            <details>
+                <summary>Ver detalles técnicos</summary>
+                <pre>{{ error }}</pre>
+            </details>
+        </div>
+        
+        <div class="error-suggestions">
+            <h4>Posibles soluciones:</h4>
+            <ul>
+                <li>🔑 Verifica que la API key de YouTube esté configurada</li>
+                <li>🎥 Asegúrate de que el video sea público y esté disponible</li>
+                <li>💬 El video debe tener comentarios habilitados</li>
+                <li>🔗 Verifica que la URL del video sea válida</li>
+                <li>📊 Puede que hayas alcanzado el límite diario de la API</li>
+            </ul>
+        </div>
+        
+        <div class="error-actions">
+            <a href="/video-activity" class="button">Intentar de nuevo</a>
+            <a href="/" class="button secondary">Volver al inicio</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

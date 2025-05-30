@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+
+{% block title %}Error - Análisis de Video{% endblock %}
+
+{% block content %}
+<div class="error-container">
+    <div class="error-header">
+        <div class="error-icon">⚠️</div>
+        <h1>Error en el Análisis de Video</h1>
+    </div>
+    
+    <div class="error-content">
+        <div class="error-message">
+            <h3>No se pudo analizar el video</h3>
+            <p>{{ error }}</p>
+        </div>
+        
+        <div class="error-suggestions">
+            <h4>Posibles causas:</h4>
+            <ul>
+                <li>🎥 <strong>Sin subtítulos:</strong> El video no tiene transcripción automática disponible</li>
+                <li>🌐 <strong>Idioma:</strong> Los subtítulos están en un idioma no soportado</li>
+                <li>🔒 <strong>Privacidad:</strong> El video es privado o tiene restricciones</li>
+                <li>🚫 <strong>Contenido:</strong> YouTube no generó subtítulos automáticos para este video</li>
+                <li>⚡ <strong>API:</strong> Error temporal en los servicios de análisis</li>
+            </ul>
+        </div>
+
+        <div class="alternatives">
+            <h4>💡 Alternativas:</h4>
+            <ul>
+                <li>Intenta con otro video del reporte que tenga subtítulos</li>
+                <li>Busca videos en español o inglés (mejor soporte)</li>
+                <li>Videos más recientes suelen tener mejor transcripción automática</li>
+            </ul>
+        </div>
+        
+        <div class="error-actions">
+            <a href="javascript:history.back()" class="button">🔄 Volver al reporte</a>
+            <a href="/seo" class="button secondary">🔍 Nuevo análisis SEO</a>
+        </div>
+    </div>
+</div>
+
+<style>
+.alternatives {
+    background-color: #d1ecf1;
+    border: 1px solid #bee5eb;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin: 2rem 0;
+}
+
+.alternatives h4 {
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+}
+
+.alternatives ul {
+    margin-left: 1.5rem;
+}
+
+.alternatives li {
+    margin-bottom: 0.5rem;
+    color: #0c5460;
+}
+</style>
+{% endblock %}
