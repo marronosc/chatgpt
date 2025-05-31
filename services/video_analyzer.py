@@ -1,12 +1,35 @@
 import os
-import openai
 from googleapiclient.discovery import build
 import logging
 from datetime import datetime
 
 # Configurar APIs
 api_key = os.environ.get('YOUTUBE_API_KEY')
-openai.api_key = os.environ.get('OPENAI_API_KEY')
+openai_api_key = os.environ.get('OPENAI_API_KEY')
+
+# Intentar importar OpenAI y manejar diferentes versiones
+client = None
+openai_version = None
+
+try:
+    from openai import OpenAI
+    # Nueva versión (1.0+)
+    if openai_api_key:
+        client = OpenAI(api_key=openai_api_key)
+        openai_version = "new"
+        logging.info("OpenAI versión nueva (1.0+) inicializada correctamente")
+except ImportError:
+    try:
+        import openai
+        # Versión antigua (0.x)
+        if openai_api_key:
+            openai.api_key = openai_api_key
+            openai_version = "old"
+            logging.info("OpenAI versión antigua (0.x) inicializada correctamente")
+    except ImportError:
+        client = None
+        openai_version = None
+        logging.error("No se pudo importar OpenAI")
 
 if api_key:
     youtube = build('youtube', 'v3', developerKey=api_key)
@@ -81,6 +104,21 @@ def analyze_video_structure(video_id, video_title=""):
     Analiza la estructura de un video usando ChatGPT
     """
     try:
+        # Verificar que tenemos OpenAI configurado
+        if not openai_api_key:
+            return {
+                'success': False,
+                'error': 'OpenAI API key no configurada en las variables de entorno.',
+                'video_id': video_id
+            }
+        
+        if not client and openai_version != "old":
+            return {
+                'success': False,
+                'error': 'Cliente OpenAI no pudo ser inicializado. Verifica la configuración.',
+                'video_id': video_id
+            }
+        
         # Obtener transcripción
         transcript = get_video_transcript(video_id)
         
@@ -133,24 +171,45 @@ Analiza esta transcripción de un video de YouTube titulado "{video_title}" y pr
 {transcript}
 """
 
-        # Llamar a ChatGPT
-        response = openai.ChatCompletion.create(
-            model="gpt-3.5-turbo",
-            messages=[
-                {
-                    "role": "system", 
-                    "content": "Eres un experto en análisis de contenido de YouTube y estructura narrativa. Proporciona análisis detallados y constructivos para ayudar a creadores a mejorar sus videos."
-                },
-                {
-                    "role": "user", 
-                    "content": prompt
-                }
-            ],
-            max_tokens=1500,
-            temperature=0.7
-        )
+        # Llamar a ChatGPT (compatible con ambas versiones)
+        messages = [
+            {
+                "role": "system", 
+                "content": "Eres un experto en análisis de contenido de YouTube y estructura narrativa. Proporciona análisis detallados y constructivos para ayudar a creadores a mejorar sus videos."
+            },
+            {
+                "role": "user", 
+                "content": prompt
+            }
+        ]
         
-        analysis = response.choices[0].message.content.strip()
+        analysis = ""
+        
+        if openai_version == "new" and client:
+            # Nueva versión OpenAI (1.0+)
+            logging.info("Usando OpenAI versión nueva para análisis")
+            response = client.chat.completions.create(
+                model="gpt-3.5-turbo",
+                messages=messages,
+                max_tokens=1500,
+                temperature=0.7
+            )
+            analysis = response.choices[0].message.content.strip()
+            
+        elif openai_version == "old":
+            # Versión antigua OpenAI (0.x)
+            logging.info("Usando OpenAI versión antigua para análisis")
+            import openai
+            response = openai.ChatCompletion.create(
+                model="gpt-3.5-turbo",
+                messages=messages,
+                max_tokens=1500,
+                temperature=0.7
+            )
+            analysis = response.choices[0].message.content.strip()
+            
+        else:
+            raise Exception("No se pudo inicializar OpenAI. Verifica la instalación y la API key.")
         
         return {
             'success': True,
@@ -159,7 +218,8 @@ Analiza esta transcripción de un video de YouTube titulado "{video_title}" y pr
             'analysis': analysis,
             'transcript_length': len(transcript.split()),
             'analyzed_at': datetime.now(),
-            'transcript_preview': transcript[:300] + "..." if len(transcript) > 300 else transcript
+            'transcript_preview': transcript[:300] + "..." if len(transcript) > 300 else transcript,
+            'openai_version': openai_version
         }
         
     except Exception as e:
@@ -226,3 +286,41 @@ def format_analysis_for_display(analysis_result):
     
     analysis_result['sections'] = sections
     return analysis_result
+
+def test_openai_connection():
+    """
+    Función de prueba para verificar la conexión con OpenAI
+    """
+    try:
+        if not openai_api_key:
+            return {"success": False, "error": "API key no configurada"}
+        
+        if openai_version == "new" and client:
+            response = client.chat.completions.create(
+                model="gpt-3.5-turbo",
+                messages=[{"role": "user", "content": "Di hola"}],
+                max_tokens=10
+            )
+            return {"success": True, "version": "new", "response": response.choices[0].message.content}
+            
+        elif openai_version == "old":
+            import openai
+            response = openai.ChatCompletion.create(
+                model="gpt-3.5-turbo",
+                messages=[{"role": "user", "content": "Di hola"}],
+                max_tokens=10
+            )
+            return {"success": True, "version": "old", "response": response.choices[0].message.content}
+        
+        else:
+            return {"success": False, "error": "OpenAI no inicializado"}
+            
+    except Exception as e:
+        return {"success": False, "error": str(e)}
+
+# Información de debug para logs
+logging.info(f"Video Analyzer inicializado:")
+logging.info(f"  - YouTube API: {'✅' if youtube else '❌'}")
+logging.info(f"  - OpenAI API: {'✅' if openai_api_key else '❌'}")
+logging.info(f"  - OpenAI Version: {openai_version or 'No detectada'}")
+logging.info(f"  - Cliente OpenAI: {'✅' if client else ('✅ (v0.x)' if openai_version == 'old' else '❌')}")
